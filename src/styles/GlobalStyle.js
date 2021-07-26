@@ -8,8 +8,9 @@ const GlobalStyle = createGlobalStyle`${reset}
 	
   body {
     font-family: -apple-system, Helvetica, Arial, "hiragino kaku gothic pro", meiryo, "Microsoft YaHei", "ms pgothic", "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", sans-serif;
-    line-height: 1;
-    color: #333333;
+    font-size: 18px;
+    line-height: 21px;
+    color: #212529;
   }
 
   a, a:active, a:hover, a:visited{
