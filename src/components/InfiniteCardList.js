@@ -11,15 +11,18 @@ const InfiniteCardList = () => {
   const isIntersecting = useObserver(target);
   const [page, setPage] = useState(1);
   const [cardData, setCardData] = useState([]);
+  const [stopFetch, setStopFetch] = useState(false);
 
   useEffect(() => {
+    if (stopFetch) return;
     if (isIntersecting) setPage((page) => page + 1);
-  }, [isIntersecting]);
+  }, [isIntersecting, stopFetch]);
 
   useEffect(async () => {
     const newCardData = await fetchCardData(
       `${API}/comments?_page=${page}&_limit=10`,
     );
+    if (newCardData.length === 0) setStopFetch(true);
     setCardData((card) => [...card, ...newCardData]);
   }, [page]);
 
