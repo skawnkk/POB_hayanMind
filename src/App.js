@@ -1,7 +1,12 @@
-import './App.css';
+import React from 'react';
+import InfiniteCardList from './components/InfiniteCardList';
 
 const App = () => {
-  return <div className="App"></div>;
+  return (
+    <>
+      <InfiniteCardList />
+    </>
+  );
 };
 
 export default App;
