@@ -6,7 +6,7 @@ export const useObserver = (target) => {
   };
   const [isIntersecting, setIntersecting] = useState(false);
   const observer = new IntersectionObserver((entries) => {
-    setIntersecting(entries.isIntersecting);
+    setIntersecting(entries[0].isIntersecting);
   }, defaultOptions);
 
   useEffect(() => {
