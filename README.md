@@ -9,7 +9,7 @@
 - 무한 스크롤 구현
   - Intersection Observer 커스텀 훅을 사용한 무한 스크롤 기능 구현
   - 스크롤이 중간 쯤 내려왔을 때 API요청 (데이터가 끊기지 않고 렌더링되기 위함)
-  - 마지막 page 도달 후(fetch의 응답값이 빈 배열인 경우) 다음 요청을 하지 않도록 분기 처리
+  - 마지막 page 도달 후(fetch의 응답값이 빈 배열인 경우) 다음 요청을 하지 않도록 분기 처리 및 'loading...'보이지 않도록 함
 
 ![51까지만](https://user-images.githubusercontent.com/45257139/127225600-0f6cd462-fbd0-4822-98bc-fb98efafe508.PNG)
 
